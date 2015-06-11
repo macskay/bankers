@@ -3,7 +3,7 @@
 
 class Deadlock(object):
     def __init__(self):
-        self.resource_rest_vector = None
+        self.resource_rest_vector = list()
         self.requirements = None
         self.occupancies = None
 
