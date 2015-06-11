@@ -1,0 +1,6 @@
+strictness: medium
+ignore-paths:
+  - bin
+pep8:
+  full: true
+max-line-length: 120
