@@ -1,11 +1,12 @@
 # -*- encoding: utf-8 -*-
 
+
 class Deadlock(object):
     def __init__(self):
         self.resource_rest_vector = None
         self.requirements = None
         self.occupancies = None
-    
+
     def find_process_that_meets_requirements(self):
         found_process = -1
         for i in range(len(self.requirements)):
@@ -32,10 +33,10 @@ class Deadlock(object):
 
     def set_resource_rest_vector(self, resource_vector):
         for i in range(len(resource_vector)):
-            sum = 0
+            sum_of_requirements = 0
             for j in range(len(self.occupancies)):
-                sum += self.occupancies[j][i]
-            self.resource_rest_vector.append(resource_vector[i] - sum)
+                sum_of_requirements += self.occupancies[j][i]
+            self.resource_rest_vector.append(resource_vector[i] - sum_of_requirements)
 
     def find_deadlock(self):
         for i in range(len(self.requirements)):
