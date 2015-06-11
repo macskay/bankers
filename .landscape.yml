@@ -5,5 +5,5 @@ pep8:
   full: true
 pylint:
   disable:
-    - unnused-variable
+    - unused-variable
 max-line-length: 120
