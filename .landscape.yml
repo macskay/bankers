@@ -3,4 +3,7 @@ ignore-paths:
   - bin
 pep8:
   full: true
+pylint:
+  disable:
+    - unnused-variable
 max-line-length: 120
